@@ -1,0 +1,229 @@
+DATA STRUCTURES
+    ------
+
+- A specialized formate for organising, processing, retrieving and storing data.
+- eg: linkedList , array , tree , graph , stack , queue ...etc
+
+- Array
+  ------
+  - Unlike variable, array can hold more than one data.
+  - DEFINITION :- Array is a single variable that can store more than one data of different datatype that are separated by commas and enclosed within sqaure bracket.
+   ordered collection of values accessed using indexes
+
+  syntax
+  ------
+  arrayname = [data1, data2, data3,.....]
+
+  - Each item in the array is given with a index value.
+  - Index value starts with zero.
+  - Number of items in an array - length (total location)
+        -to get last element of array
+                arrayname.length-1
+        
+        {
+          key:value = index:data
+        }
+
+
+  
+  ways to access each item from an array
+  --------------------------------------
+  1) normal for loop
+  2) for in -  directly return indexes of the array
+  3) for of - return directly the item
+
+
+ARRAY Operations
+----------------
+
+1) push() - to add a new item to the end of an array.
+
+2) unshift() - to add new item to the start of an array.
+
+3) pop() - to remove the last items from the array.
+
+4) shift() - to remove the first item from the array.
+
+5) sort() - it arrange the array in ascending or descending order
+
+6) foreach() - same as for loop - to access each items form an array,doesnt return new array.
+
+      syntax
+      ------
+      array.forEach((variable) => statements)
+
+7) map() - to access each item from an array, it returns a new array of the same number of items in parent array
+
+  syntax
+  -------
+  newArray = parentArray.map((variable) => statements)
+
+8) reduce() - it iterate through the array and return a single value from the array
+    eg:- lowest value, highest value, average, sum of all nums etc...
+
+    syntax
+    -------
+    value = array.reduce((previousValue,currentValue) => statement)
+
+9) filter() - it returns a new array having elements statisfying a specific condition
+
+    syntax
+    -------
+    newArray = parentArray.filter((variable_name) => condition)
+
+10) some() - it returns boolean values based on the condition, not newArray
+        syntax
+        ------
+        value = parentArray.some((variable_name) => condition)
+
+11) find() - it returns the first element statisfying the condition
+
+      syntax
+        ------
+        value = parentArray.find((variable_name) => condition)
+
+
+12) flat(depth) - used to change the dimension of an array
+                - depth refers to  how deep a nested array need to be flattened.
+                - depth -> infinity make the array change its dimension directly to 1D
+                - if depth not sepicified it goes to next below level dimension to the current dimension
+      eg:- in prgm 16.js => Array folder
+
+13) includes() - to check whether a given item is present in the array or not
+    ( some() -> based on condition , includes() -> based on elements )
+      - returns boolean values
+
+        syntax
+        -------
+        array.includes('item')
+
+
+14) splice() - do add/remove items at different positions in an array
+
+      syntax
+      -------
+      array.splice(startIndex, count_of_remove, items_to_added)
+
+
+15) indexOf() - to get an index of an element
+              - will return the index of first occured element
+
+16) lastIndexOf() - to get the last index of the element
+
+17) slice() - it gives a sub array from a parent array
+            - ending index will be excluded
+            syntax
+            ------
+            array.slice(startIndex , endIndex)
+
+
+18) reduceRight() - returns single value, iteration starts form the last element of an array
+
+
+
+
+Linear Search - searching by each element
+
+Binary Search 
+---------------
+
+- time consumption by reducing the number of iteration.
+- prerequsite - in the given array should be in ascending order
+
+
+Algorithm -> step by step procedure or instruction to solve a problem.
+
+
+
+Algorithm for Binary Search
+-----------------------------
+Step 1 - Start
+Step 2 - Sort the given array
+Step 3 - initialize 2 variable low and up and assign low as lowest index value and up as the (array length-1).
+Step 4 - Calculate the middle value of the array by math.floor((low + up)/2).
+Step 5 - compare if the value in the obtained middle value index to the seach value.
+        Step 5(a) - mid value == search 
+                    -> print search is present
+
+        Step 5(b) - mid value < search
+                  -> low = mid + 1
+
+        Step 5(c) - mid value > search
+                  -> up = mid - 1
+
+Step 6 - Repeat step 3 until low and up coincides
+Step 7 - Stop
+
+
+
+Flow Chart -> Pictorial representation of algorithm.
+
+    shapes
+    -------
+    1) oval - start/end
+    2) diamond - discussion
+    3) rectangle - statement
+    4) parallelogram - input statement
+    5) arrow - connections/ flow
+
+
+  Nested Array
+  -------------
+  array within the array
+
+
+
+
+Array Methods
+--------------
+
+1) foreach() - same as for loop - to access each items from an array.
+      syntax
+      ------
+      array.forEach((variable) => statements)
+
+
+
+2) map() - to access each item from an array, it returns a new array of the same number of items in parent array
+syntax
+  -------
+  newArray = parent Array.map((variable) => statements)
+
+3) reduce() - it iterate through the array and return a single value from the array
+    eg:- lowest value, highest value, average, sum of all nums etc...
+
+    syntax
+    -------
+    value = array.reduce((previousValue,currentValue) => statement)
+
+4) filter() - it returns a new array having elements statisfying a specific condition
+
+    syntax
+    -------
+    newArray = parentArray.filter((variable_name) => condition)
+
+5) some() - it returns boolean values based on the condition, not newArray
+        syntax
+        ------
+        value = parentArray.some((variable_name) => condition)
+
+6) find() - it returns the first element  statisfying the condition
+
+      syntax
+        ------
+        value = parentArray.find((variable_name) => condition)
+
+7) flat(depth) - used to change the dimension of an array
+                - depth refers to  how deep a nested array need to be flattened.
+                - depth -> infinity make the array change its dimension directly to 1D
+                - if depth not sepicified it goes to next below level dimension to the cureent dimension
+      eg:- in prgm 16.js => Array folder
+
+
+8) includes() - to check whether a given item is present in the array or not
+    ( some() -> based on condition , includes() -> based on elements )
+      - returns boolean values
+      
+        syntax
+        -------
+        array.includes('item)
